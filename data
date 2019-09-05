@@ -1,0 +1,49 @@
+class student:
+    SCount = 0
+
+    def __init__(self, ID, firstName, lastName, phone, gneder, birthDate, homework, quiz, participation, midterm, final):
+        self.ID = ID
+        self.fullName = firstName + " " + lastName
+        self.email = firstName + "." + lastName + "@edu.aua.am"
+        self.phone = phone
+        self.gender = gneder
+        self.birthDate = birthDate
+        self.homework = homework
+        self.quizes = quiz
+        self.participation = participation
+        self.midterm = midterm
+        self.final = final
+
+
+
+    def getPersonalInfo(self):
+        print(self.fullName)
+        print(f" Gender: {self.gender}")
+        print(f" ID for {self.fullName} is {self.ID}")
+        print(f" Email for {self.fullName} is {self.email}")
+        print(f" Phone # for {self.fullName} is {self.phone}")
+        print(f" {self.fullName}'s birth date is on {self.birthDate}")
+        print("______________________")
+
+
+    def GetCurrentGrade(self):
+        print (f"Here are the grades for, {self.fullName}")
+        print(f" Homework: {self.homework}")
+        print(f" Quiz: {self.quizes}")
+        print(f" Participation: {self.participation}")
+        print(f" Mid Term: {self.midterm}")
+        print(f" Final Exam: {self.final}")
+        print("_______________________")
+
+
+def main():
+    st1 = student("Aua123", "Gor", "Isoyan", "1234", "Male", "01/01/2019", "90", "80", "86", "70", "100")
+    st2 = student("AUA321", "Ani", "Zadikyan", "8120934801", "Female", "01/01/2006", "60", "78", "96", "88", "60")
+
+
+    st1.getPersonalInfo()
+    st2.getPersonalInfo()
+    st1.GetCurrentGrade()
+    st2.GetCurrentGrade()
+
+main()
