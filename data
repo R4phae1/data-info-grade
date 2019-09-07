@@ -27,6 +27,7 @@ class student:
 
 
     def GetCurrentGrade(self):
+        #does not calculate the grade. Class attributes hsould be used for percents and be used here.
         print (f"Here are the grades for, {self.fullName}")
         print(f" Homework: {self.homework}")
         print(f" Quiz: {self.quizes}")
